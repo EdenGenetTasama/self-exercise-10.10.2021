@@ -104,50 +104,50 @@ let arrayOfObjectBuilding = [
   { width: 5.5, height: 4.4, floorNum: 6, apartmentNum: 10 },
 ];
 
-function PrintingArrayOfObjects(array) {
-  array.forEach((element) => {
-    for (const key in element) {
-      console.log(`${key} : ${element[key]}`);
-    }
-  });
-}
+// function PrintingArrayOfObjects(array) {
+//   array.forEach((element) => {
+//     for (const key in element) {
+//       console.log(`${key} : ${element[key]}`);
+//     }
+//   });
+// }
 
 // PrintingArrayOfObjects(arrayOfObjectBuilding);
 
-function PrintingArrayOfObjectsTwo(array) {
-  for (const item of array) {
-    for (const key in item) {
-      console.log(`${key} : ${item[key]}`);
-    }
-  }
-}
+// function PrintingArrayOfObjectsTwo(array) {
+//   for (const item of array) {
+//     for (const key in item) {
+//       console.log(`${key} : ${item[key]}`);
+//     }
+//   }
+// }
 
 // PrintingArrayOfObjectsTwo(arrayOfObjectBuilding);
 
 //!3.	צרו פונקציה שמקבלת מערך של בניינים ומחזירה מערך חדש, שכולל רק את הבניינים שמספר הקומות בהם גדול מ5.
 
-function PrintingArrayOfObjects(array) {
-  array.forEach((element) => {
-    for (const key in element) {
-      if (element["floorNum"] > 5) {
-        console.log(`${key} : ${element[key]}`);
-      }
-    }
-  });
+// function PrintingArrayOfObjects(array) {
+//   array.forEach((element) => {
+//     for (const key in element) {
+//       if (element["floorNum"] > 5) {
+//         console.log(`${key} : ${element[key]}`);
+//       }
+//     }
+//   });
   // console.log("All floors is under 5 ");
-}
+// }
 
 //   PrintingArrayOfObjects(arrayOfObjectBuilding);
 
-function PrintingArrayOfObjectsTwo(array) {
-  for (const item of array) {
-    for (const key in item) {
-      if (item["floorNum"] > 5) {
-        console.log(`${key} : ${item[key]}`);
-      }
-    }
-  }
-}
+// function PrintingArrayOfObjectsTwo(array) {
+//   for (const item of array) {
+//     for (const key in item) {
+//       if (item["floorNum"] > 5) {
+//         console.log(`${key} : ${item[key]}`);
+//       }
+//     }
+//   }
+// }
 
 //   PrintingArrayOfObjectsTwo(arrayOfObjectBuilding)
 
@@ -158,23 +158,23 @@ function PrintingArrayOfObjectsTwo(array) {
 
 
 
-// function stopAtZero(){
-//     let userNums=[];
-//     let getNumber=Number(prompt("Enter Number:"));
-//     while (getNumber > 0) {
-//         userNums.push(getNumber);
-//         // getNumber=Number(prompt("Enter Number:"));
-//         userNums.sort((a,b)=>{
-//             return a-b;
-//         })
+function stopAtZero(){
+    let userNums=[];
+    let getNumber=Number(prompt("Enter Number:"));
+    while (getNumber > 0) {
+      userNums.push(getNumber);
+      let getNumber=Number(prompt("Enter Number:"));
+        userNums.sort((a,b)=>{
+            return a-b;
+        })
         
-//     }
-//     numberOne.innerHTML+=`<p>max number:${userNums[userNums.length-1]}</p>`
-//     numberOne.innerHTML+=`<p>min number:${userNums[0]}</p>`
+    }
+    numberOne.innerHTML+=`<p>max number:${userNums[userNums.length-1]}</p>`
+    numberOne.innerHTML+=`<p>min number:${userNums[0]}</p>`
 
-// }
+}
 
-// stopAtZero()
+stopAtZero();
 
 // 2.	צרו פונקציה שמקבלת 10 מספרים מהמשתמש,
 //  המספרים נכנסים למערך שמודפס למסך,
@@ -229,3 +229,22 @@ function checkLetters(name) {
 //!שהיא מדפיסה "fizz" במכפלה של 3, "buzz" במכפלות של 5, ו-"fizzbuzz" במכפלות של 3 
 //!ו-5.
 
+// function fizBuzzGame () {
+//     for (let i = 0; i < 100; i++){
+//     if (i%3 == 0 && i%5== 0){
+//         console.log("fiz Buzz");
+//     }
+//     else if (i%5 == 0){
+//         console.log("buzz");
+//     }
+//     else if (i%3 == 0){
+//         console.log("fizz");
+//     }
+//     else {
+//         console.log("none");
+//     }
+//     }
+    
+//     }
+//     fizBuzzGame();
+    
