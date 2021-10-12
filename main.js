@@ -134,7 +134,7 @@ let arrayOfObjectBuilding = [
 //       }
 //     }
 //   });
-  // console.log("All floors is under 5 ");
+// console.log("All floors is under 5 ");
 // }
 
 //   PrintingArrayOfObjects(arrayOfObjectBuilding);
@@ -155,33 +155,27 @@ let arrayOfObjectBuilding = [
 //! JS question
 //!1.	צרו פונקציה שמקבלת מספרים מהמשתמש, עד שהמשתמש מכניס 0, הדפיסו למסך את המספר הגדול ביותר ואת המספר הקטן ביותר.
 
-
-
-
-function stopAtZero(){
-    let userNums=[];
-    let getNumber=Number(prompt("Enter Number:"));
-    while (getNumber > 0) {
-      userNums.push(getNumber);
-      let getNumber=Number(prompt("Enter Number:"));
-        userNums.sort((a,b)=>{
-            return a-b;
-        })
-        
-    }
-    numberOne.innerHTML+=`<p>max number:${userNums[userNums.length-1]}</p>`
-    numberOne.innerHTML+=`<p>min number:${userNums[0]}</p>`
-
+function stopAtZero() {
+  let userNums = [];
+  let getNumber = Number(prompt("Enter Number:"));
+  while (getNumber > 0) {
+    userNums.push(getNumber);
+    getNumber = Number(prompt("Enter Number:"));
+    userNums.sort((a, b) => {
+      return a - b;
+    });
+  }
+  numberOne.innerHTML += `<p>max number:${userNums[userNums.length - 1]}</p>`;
+  numberOne.innerHTML += `<p>min number:${userNums[0]}</p>`;
 }
 
-stopAtZero();
+// stopAtZero();
 
 // 2.	צרו פונקציה שמקבלת 10 מספרים מהמשתמש,
 //  המספרים נכנסים למערך שמודפס למסך,
 //   הפונקציה מחזירה בסוף מערך של מספרים זוגיים בלבד.
 // let arrayOfNumbersTwo=[];
 // let zogiNumber = [];
-
 
 // function getTenNumbers(userNumber) {
 //     for (let i = 0; i <10; i++) {
@@ -202,31 +196,30 @@ stopAtZero();
 
 // getTenNumbers();
 
-
-//! 4.	צרו פונקציה שמקבלת מהמשתמש שם פרטי, הפונקציה מקבלת מבחוץ מערך של אותיות 
-//!באותיות באנגלית, ובודקת באיזה אות מתחיל השם של המשתמש, במידה והשם מתחיל ב 
+//! 4.	צרו פונקציה שמקבלת מהמשתמש שם פרטי, הפונקציה מקבלת מבחוץ מערך של אותיות
+//!באותיות באנגלית, ובודקת באיזה אות מתחיל השם של המשתמש, במידה והשם מתחיל ב
 //!A הדפיסו "NICE"   ובמידה השם מתחיל ב Z הדפיסו "GOOD".
 
-let arrayOfLetter=["A","B","Z", "M", "C"]
+let arrayOfLetter = ["A", "B", "Z", "M", "C"];
 
 function checkLetters(name) {
-    arrayOfLetter.forEach(element => {
-        let firstLetter = name[0]
-        if(firstLetter == "A"){
-            console.log("NICE");
-        }
-        if(firstLetter == "Z"){
-            console.log("GOOD");
-        }
-    });
+  arrayOfLetter.forEach((element) => {
+    let firstLetter = name[0];
+    if (firstLetter == "A") {
+      console.log("NICE");
+    }
+    if (firstLetter == "Z") {
+      console.log("GOOD");
+    }
+  });
 }
 
 // checkLetters(prompt("Enter name:"))
 
 //!**************************************************************************************************
 
-//!כתבו פונקציה שבתוכה נמצאת  לולאה שמבצעת עד 100 איטרציות, תוך כדי 
-//!שהיא מדפיסה "fizz" במכפלה של 3, "buzz" במכפלות של 5, ו-"fizzbuzz" במכפלות של 3 
+//!כתבו פונקציה שבתוכה נמצאת  לולאה שמבצעת עד 100 איטרציות, תוך כדי
+//!שהיא מדפיסה "fizz" במכפלה של 3, "buzz" במכפלות של 5, ו-"fizzbuzz" במכפלות של 3
 //!ו-5.
 
 // function fizBuzzGame () {
@@ -244,7 +237,63 @@ function checkLetters(name) {
 //         console.log("none");
 //     }
 //     }
-    
+
 //     }
 //     fizBuzzGame();
-    
+
+//!**************************************************************************************************
+// משימת לוטו
+
+// •	משתמש צריך לנחש 10 מספרים .
+let enterName = prompt("Please enter your name:");
+let counterGuesses = 0;
+let arrayOfguesses = [];
+let counterGuessesRendom = 0;
+let arrayOfRandomnNum = [];
+
+// function lotoGame(gessesOfUser) {
+//   while (counter < 5) {
+//     let guessOfUser = Number(prompt("please enter 10 number to see if you won:"));
+//     arrayOfguesses.push(guessOfUser);
+//     // let rendomNumber = Math.floor(Math.random() * 50);
+//     // arrayOfRandomnNum.push(rendomNumber);
+//     // console.log("מערך אקראי"+arrayOfRandomnNum);
+//     // console.log("מערך של המשתמש "+arrayOfguesses);
+//     // while (arrayOfRandomnNum.length < 10) {
+//     //   for (let i = 0; i < arrayOfRandomnNum.length; i++) {
+//     //     //   if()
+//     //     // }
+//     //     // console.log(guessOfUser,counter);
+//         counter++;
+//     //   }
+//     }
+//   }
+
+// lotoGame(Number(prompt("please enter 10 number to see if you won:"))):
+
+while (counterGuesses < 10) {
+  let guessOfUser = Number(prompt("please enter 10 number to see if you won:"));
+  arrayOfguesses.push(guessOfUser);
+  counterGuesses++;
+}
+
+
+console.log("user number" + arrayOfguesses);
+
+while (counterGuessesRendom < 50) {
+  let rendomNumber = Math.floor(Math.random() * 50);
+  arrayOfRandomnNum.push(rendomNumber);
+  counterGuessesRendom++;
+}
+console.log("rendom number" + arrayOfRandomnNum);
+
+for (let i = 0; i < arrayOfRandomnNum.length; i++) {
+  for (let j = 0 ; j < arrayOfguesses.length; j++) {
+    if (arrayOfRandomnNum[i] == arrayOfguesses[j]) {
+      let howManyGuesses = [i].length;
+console.log(howManyGuesses);
+        // console.log(` i: ${arrayOfRandomnNum[i]} . j:${arrayOfguesses[j]}`);
+        // console.log(מספר ניחושים נכון : );
+      }
+  }
+}
