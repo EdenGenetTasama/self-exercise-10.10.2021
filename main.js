@@ -169,6 +169,8 @@ function stopAtZero() {
   numberOne.innerHTML += `<p>min number:${userNums[0]}</p>`;
 }
 
+
+
 // stopAtZero();
 
 // 2.	צרו פונקציה שמקבלת 10 מספרים מהמשתמש,
@@ -221,9 +223,20 @@ function checkLetters(name) {
 //  במידה וכן יש להדפיס למסך הודעת הצלחה והודעת כישלון במידה ולא.
 
 let arrayOfRandomNumbers= [];
-let remdonNumber = Math.floor(Math.random() * 10);
-console.log(remdonNumber);
+let userInput = prompt("Enter a number:")
 
+for (let i = 0; i < 100; i++) {
+  arrayOfRandomNumbers.push(Math.floor(Math.random() *100));
+}
+console.log("מערך:"+arrayOfRandomNumbers);
+console.log("משתמש: "+userInput);
+
+for (let i = 0; i < arrayOfRandomNumbers.length; i++) {
+  if (userInput == arrayOfRandomNumbers[i]) {
+   alert("success")
+  }
+  
+}
 
 
 // function isNumberExiest(rendonNumber) {
@@ -291,29 +304,29 @@ let arrayOfRandomnNum = [];
 
 // lotoGame(Number(prompt("please enter 10 number to see if you won:"))):
 
-while (counterGuesses < 10) {
-  // let guessOfUser = Number(prompt("please enter 10 number to see if you won:"));
-  // arrayOfguesses.push(guessOfUser);
-  // counterGuesses++;
-}
+// while (counterGuesses < 10) {
+//   // let guessOfUser = Number(prompt("please enter 10 number to see if you won:"));
+//   // arrayOfguesses.push(guessOfUser);
+//   // counterGuesses++;
+// }
 
 
 // console.log("user number" + arrayOfguesses);
 
-while (counterGuessesRendom < 50) {
-  let rendomNumber = Math.floor(Math.random() * 50);
-  arrayOfRandomnNum.push(rendomNumber);
-  counterGuessesRendom++;
-}
+// while (counterGuessesRendom < 50) {
+//   let rendomNumber = Math.floor(Math.random() * 50);
+//   arrayOfRandomnNum.push(rendomNumber);
+//   counterGuessesRendom++;
+// }
 // console.log("rendom number" + arrayOfRandomnNum);
 
-for (let i = 0; i < arrayOfRandomnNum.length; i++) {
-  for (let j = 0 ; j < arrayOfguesses.length; j++) {
-    if (arrayOfRandomnNum[i] == arrayOfguesses[j]) {
-      let howManyGuesses = [i].length;
-        // console.log(howManyGuesses);
-        // console.log(` i: ${arrayOfRandomnNum[i]} . j:${arrayOfguesses[j]}`);
-        // console.log(מספר ניחושים נכון : );
-      }
-  }
-}
+// for (let i = 0; i < arrayOfRandomnNum.length; i++) {
+//   for (let j = 0 ; j < arrayOfguesses.length; j++) {
+//     if (arrayOfRandomnNum[i] == arrayOfguesses[j]) {
+//       let howManyGuesses = [i].length;
+//         // console.log(howManyGuesses);
+//         // console.log(` i: ${arrayOfRandomnNum[i]} . j:${arrayOfguesses[j]}`);
+//         // console.log(מספר ניחושים נכון : );
+//       }
+//   }
+// }
